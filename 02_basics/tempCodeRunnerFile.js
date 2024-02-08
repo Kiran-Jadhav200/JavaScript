@@ -1,4 +1,5 @@
-console.log(JsUser.email);
-// console.log(JsUser["email"]);
-// console.log(JsUser["Full Name"]);
-// console.log(JsUser[mySym]);
+console.log(tinderUser);
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));

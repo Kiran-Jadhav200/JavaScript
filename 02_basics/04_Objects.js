@@ -26,30 +26,58 @@ const obj4 ={5:"a", 6:"n"}
 //const object3 = Object.assign({},obj1,obj2,obj4)
 const object3 = {...obj1 , ...obj2}
 
-console.log(object3);
+//console.log(object3);
 
 
-const users = [
-    {
-        id:1,
-        email:"h@email.com"
-    },
-    {
-        id:2,
-        email:"h@email.com"
-    },
-    {
-        id:3,
-        email:"h@email.com"
-    },
-    {
-        id:4,
-        email:"h@email.com"
-    }
+// const users = [
+//     {
+//         id:1,
+//         email:"h@email.com"
+//     },
+//     {
+//         id:2,
+//         email:"h@email.com"
+//     },
+//     {
+//         id:3,
+//         email:"h@email.com"
+//     },
+//     {
+//         id:4,
+//         email:"h@email.com"
+//     }
     
-]
-console.log(tinderUser);
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// ]
+// console.log(tinderUser);
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+// deStrucing of object
+const course ={
+    courseName:"js in Hindi",
+    price:"999",
+    courseInstructor:"Hitesh"
+}
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+// {
+
+// "name":"kiran",
+// "courseName": "Js in hindi",
+// "price": "free"
+
+// }
+
+[
+    {},
+    {},
+    {}
+]
