@@ -94,7 +94,7 @@ setInterval(()=> {
 
 ```
 
-## project 3
+## project 4
 ```javascript 
 
 let randomNumber =parseInt(Math.random()*100 + 1)
