@@ -80,3 +80,16 @@ results.innerHTML = `Please give a valid height ${height}`
 //<p>Normal Range = 18.6 and 24.9</p>
 //<p>Overweight = Greater than 24.9</p>
 ```
+
+## project 3
+
+```javascript
+const clock = document.getElementById('clock')
+
+setInterval(()=> {
+  let date = new Date();
+  //console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
