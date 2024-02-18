@@ -23,11 +23,20 @@
 // document.getElementById('owl').onclick = ()=>{
 //     alert('owl clicked');
 // }
+
+
 // attachEvent()
 //jQuery -on 
-document.getElementById('owl').addEventListener('click', (e)=>{
-      console.log(e)
-})
+//types timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget
+
+// imp to interview -> clientX, clientY, screenX, screenY
+//altkey, ctrlkey, shitkey, keyCode 
+document.getElementById('owl').addEventListener('click', function(e){
+     console.log(e);
+},false)
+
+
 
 </script>
 </html>
