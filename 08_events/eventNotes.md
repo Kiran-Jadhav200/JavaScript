@@ -19,6 +19,12 @@ Each event has a timestamp associated with it, indicating when the event occurre
 
 Some events have a default behavior associated with them, such as a form submission or a link click. By default, the browser will perform this behavior when the event occurs. However, we can prevent the default behavior from happening by calling the `preventDefault()` method on the event object.
 
+## Event Propagation
+
+When an event occurs on an element, it can also trigger the same event on its parent elements. This is known as event propagation or event bubbling. By default, events bubble up from the target element to its parent elements. However, we can stop the event from propagating further by calling the `stopPropagation()` method on the event object.
+
+
+
 ## Event Properties
 
 When an event occurs, an event object is created and passed to the event handler function. This object contains various properties that provide information about the event. Some commonly used properties include:
@@ -26,6 +32,14 @@ When an event occurs, an event object is created and passed to the event handler
 - `target`: The element on which the event occurred.
 - `toElement`, `srcElement`: Alternate properties for accessing the target element.
 - `currentTarget`: The element that is currently handling the event.
+
+## Event Bubbling
+
+Event bubbling, also known as event propagation, is the process by which an event triggered on a specific element will also trigger the same event on its parent elements. By default, events bubble up from the target element to its parent elements. This means that if you have nested elements, such as a button inside a div, a click event on the button will also trigger a click event on the div.
+
+Event bubbling can be useful in certain scenarios, as it allows you to handle events at different levels of the DOM hierarchy. However, it can also lead to unintended consequences if not properly managed.
+
+To stop an event from propagating further, you can call the `stopPropagation()` method on the event object. This will prevent the event from triggering on parent elements.
 
 ## Additional Properties
 
@@ -74,3 +88,9 @@ These properties can be accessed from the event object to perform specific actio
 
 - How can you check if a specific key was pressed during a keyboard event?
     You can check if a specific key was pressed during a keyboard event by accessing the `keyCode` property of the event object. The `keyCode` property contains the code of the key that was pressed.
+
+- What is event bubbling in JavaScript?
+    Event bubbling, also known as event propagation, is the process by which an event triggered on a specific element will also trigger the same event on its parent elements. By default, events bubble up from the target element to its parent elements. This means that if you have nested elements, such as a button inside a div, a click event on the button will also trigger a click event on the div.
+
+- How can you stop an event from propagating further?
+    To stop an event from propagating further, you can call the `stopPropagation()` method on the event object. This will prevent the event from triggering on parent elements.
