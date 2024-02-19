@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur JavaScript</title>
+</head>
+<body style="background-color: #121212; color: #FFF;">
+    <h1> Chai aur code</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+
+</body>
+
+<script>
+const sayDate = (str) => {
+    console.log(str, "kiran", Date.now());
+}
+
+
+
+const start = document.querySelector("#start");
+const stop = document.querySelector("#stop");
+let intervalId; // Store the intervalId in a variable accessible to both event listeners
+
+document.addEventListener('click', (e) => {
+    if (e.target.id === 'start') {
+        intervalId = setInterval(sayDate, 2000, 'hi'); // Assign the intervalId to the variable
+        stop.addEventListener('click', () => {
+            clearInterval(intervalId); // Clear the interval using the stored intervalId
+        });
+    }
+}, false);
+</script>
+</html>
